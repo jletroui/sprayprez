@@ -1,0 +1,10 @@
+.idea/
+.idea_modules/
+target/
+cache/
+refdata/
+.DS_Store
+rnd_us.txt
+*.csv
+*.zip
+*.replaced
