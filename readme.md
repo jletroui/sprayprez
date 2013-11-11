@@ -1,0 +1,1 @@
+Sample code and presentation slides for the November 2013 Scala Montreal meetup.
