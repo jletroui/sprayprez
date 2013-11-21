@@ -7,4 +7,4 @@ Contact:
 
     @jletroui
 
-For more info on spray: [spray.io](www.spray.io)
+For more info on spray: [spray.io](http://www.spray.io)
