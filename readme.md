@@ -1,8 +1,10 @@
-Sample code and slides for the Spray introduction (http://spray.io/).
+Sample code and slides for the Spray introduction presentation.
 Presented at the November 2013 Scala Montreal meetup.
 
-Contact: 
+Contact:
 
     julien.letrouit@tritondigital.com
 
     @jletroui
+
+For more info on spray: [spray.io](www.spray.io)
