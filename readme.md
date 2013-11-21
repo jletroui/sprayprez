@@ -3,5 +3,6 @@ Presented at the November 2013 Scala Montreal meetup.
 
 Contact: 
 
-julien.letrouit@tritondigital.com
-@jletroui
+    julien.letrouit@tritondigital.com
+
+    @jletroui
