@@ -1,26 +1,29 @@
 package sprayprez
 
-import spray.routing.{RequestContext, HttpService}
+import spray.routing.HttpService
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
 
 trait CustomDirectiveService extends HttpService {
-  val loggingRoute = mapRequestContext(logTheResponseResult) {
-    get {
-      complete {
-        "Hello!"
+  val countingRoute =
+    countResponseResults {
+      get {
+        complete {
+          "Hello!"
+        }
       }
     }
-  }
 
-  def logTheResponseResult(ctx: RequestContext) = ctx.withHttpResponseMapped { resp =>
-    if (resp.status.isSuccess)
-      incrementCounterDB("success")
-    else
-      incrementCounterDB("failure")
+  val countResponseResults =
+    mapRequestContext {
+      _.withHttpResponseMapped { response =>
 
-    resp
-  }
+        if (response.status.isSuccess) incrementCounterDB("response.success")
+        else incrementCounterDB("response.failure")
+
+        response
+      }
+    }
 
   def incrementCounterDB(counterName: String) = Future {
     // Call to the DB
